@@ -18,7 +18,7 @@ class ProductController extends Controller
         return view("admin/products/create");
     }
 
-    public function ProductProduct(Request $request){
+    public function createProduct(Request $request){
         $product = new Product();
         $product->name = $request->name;
         $product->details = $request->detail;

@@ -17,4 +17,4 @@ use App\Http\Controllers\DashbardController;
 Route::get('/', [DashbardController::class , "dashboard"]);
 Route::get('/products', [ProductController::class , "indexProduct"]);
 Route::get('/createProduct', [ProductController::class , "createPage"]);
-Route::post('/createProduct', [ProductController::class , "ProductProduct"]);
+Route::post('/createProduct', [ProductController::class , "createProduct"]);
