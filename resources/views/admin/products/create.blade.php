@@ -18,10 +18,9 @@
         <br>
         <div class="form-floating">
             <select name="catogry" class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Select Category</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              @foreach ($catogries as $catogry)
+              <option value="{{$catogry->id}}">{{$catogry->name}}</option>
+              @endforeach
             </select>
             <label for="floatingSelect">Select Category</label>
           </div>

@@ -26,8 +26,8 @@
                 <td>{{$product->price}}</td>
                 <td>{{$product->category_id}}</td>
                 <td>
-                <button class="btn btn-danger delete-btn">Delete</button>
-                <button class="btn btn-primary update-btn">Update</button>
+                <a href="deleteProduct/{{$product->id}}" class="btn btn-danger delete-btn">Delete</a>
+                <a href="updateProduct{{$product->id}}" class="btn btn-primary update-btn">Update</a>
                 </td>
             </tr>
             @endforeach
