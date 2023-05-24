@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashbardController;
 use App\Http\Controllers\catogryController;
+use App\Http\Controllers\FrontController;
 
 
 
@@ -25,9 +26,7 @@ Route::get('/updateCatogry{id}', [catogryController::class , "updateCatogryPage"
 Route::post('/updateCatogry', [catogryController::class , "updateCatogry"]);
 
 //front page Routes
-Route::get('/', function () {
-    return view("Home/index");
-
-});
+Route::get('/', [FrontController::class , "homePage"]);
+Route::get('/details{id}', [FrontController::class , "productDetails"]);
 
 
