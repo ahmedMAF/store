@@ -10,6 +10,12 @@ use App\Http\Controllers\ProductController;
 
 class ProductController extends Controller
 {
+    //auth
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function indexProduct(){
         $products = Product::all();
         return view("admin/products/index" , compact("products"));

@@ -7,6 +7,12 @@ use App\Models\Categorie;
 
 class catogryController extends Controller
 {
+    //auth
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function indexCatogry(){
         $catogries = Categorie::all();
         return view("admin\catogry\index" , compact("catogries"));
