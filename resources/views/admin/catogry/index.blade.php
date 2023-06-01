@@ -34,5 +34,7 @@
 
         </tbody>
       </table>
+      {{ $catogries->links() }}
+
 </div>
 @endsection

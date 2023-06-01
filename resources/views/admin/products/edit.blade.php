@@ -12,7 +12,7 @@
         <br>
         <div class="form-floating">
             <select name="catogry" class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected value="{{$catogry_name->id}}">{{$catogry_name->name}}</option>
+              <option selected value="{{$product->category->id}}">{{$product->category->name}}</option>
               @foreach ($catogries as $item)
               <option value="{{$item->id}}">{{$item->name}}</option>
               @endforeach

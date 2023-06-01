@@ -24,15 +24,16 @@
                 <td>{{$product->id}}</td>
                 <td>{{$product->name}}</td>
                 <td>{{$product->price}}</td>
-                <td>{{$product->category_id}}</td>
+                <td>{{$product->category->name}}</td>
                 <td>
                 <a href="deleteProduct/{{$product->id}}" class="btn btn-danger delete-btn">Delete</a>
                 <a href="updateProduct{{$product->id}}" class="btn btn-primary update-btn">Update</a>
                 </td>
             </tr>
             @endforeach
-
         </tbody>
       </table>
+      {{ $products->links() }}
+
 </div>
 @endsection

@@ -61,7 +61,7 @@
       </div><!-- /.col-lg-4 -->
       @endforeach
     </div><!-- /.row -->
-
+    {{ $products->links() }}
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->

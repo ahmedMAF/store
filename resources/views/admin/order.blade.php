@@ -18,8 +18,8 @@
             @foreach ($orders as $order)
                 <tr>
                     <td>{{$order->id}}</td>
-                    <td>{{$order->user_id}}</td>
-                    <td>{{$order->product_id}}</td>
+                    <td>{{$order->user->name}}</td>
+                    <td>{{$order->product->name}}</td>
                     <td>{{$order->quantity}}</td>
                     <td>{{$order->address}}</td>
                     <td>{{$order->created_at}}</td>
@@ -28,5 +28,7 @@
             @endforeach
         </tbody>
       </table>
+      {{ $orders->links() }}
+
 </div>
 @endsection

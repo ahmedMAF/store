@@ -8,7 +8,7 @@ use App\Models\Product;
 class FrontController extends Controller
 {
     public function homePage(){
-        $products = Product::all();
+        $products = Product::paginate(3);
         return view("Home\index" , compact("products"));
     }
     public function productDetails($id){

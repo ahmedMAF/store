@@ -89,11 +89,19 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
+      .hidden {
+          display: none;
+      }
+      .justify-between{
+          text-align: center;
+          margin-top: 20px
+      }
     </style>
 
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

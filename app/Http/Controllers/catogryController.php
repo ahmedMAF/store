@@ -14,7 +14,7 @@ class catogryController extends Controller
     }
 
     public function indexCatogry(){
-        $catogries = Categorie::all();
+        $catogries = Categorie::paginate(5);
         return view("admin\catogry\index" , compact("catogries"));
     }
     public function createPage(){

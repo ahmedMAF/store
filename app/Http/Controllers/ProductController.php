@@ -17,7 +17,8 @@ class ProductController extends Controller
     }
 
     public function indexProduct(){
-        $products = Product::all();
+        //$products = Product::all();
+        $products = Product::with('category')->paginate(5);
         return view("admin/products/index" , compact("products"));
     }
 
@@ -44,10 +45,11 @@ class ProductController extends Controller
     }
 
     public function updateProductPage($id){
-        $product = Product::find($id);
-        $catogry_name = Categorie::find($product->category_id);
+        //$product = Product::find($id);
+        $product = Product::with('category')->find($id);
+        //$catogry_name = Categorie::find($product->category_id);
         $catogries = Categorie::all();
-        return view("admin/products/edit" , compact("product" , "catogry_name" , "catogries"));
+        return view("admin/products/edit" , compact("product" , "catogries"));
     }
 
     public function updateProduct(Request $request){
